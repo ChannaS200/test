@@ -1,0 +1,129 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    overflow: hidden;
+}
+
+/* Container styling */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+}
+
+/* Welcome Section */
+.welcome-section {
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px 40px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Button styles */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: 0.3s ease-in-out;
+}
+
+.login-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+}
+
+.signup-btn {
+    background-color: #28A745;
+    color: #fff;
+    border: none;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated Background Section */
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.animated-background .image1,
+.animated-background .image2,
+.animated-background .image3 {
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    animation: move 10s infinite alternate;
+}
+
+.animated-background .image1 {
+    background-image: url('image1.jpg'); /* Replace with your image */
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.animated-background .image2 {
+    background-image: url('image2.png'); /* Replace with your image */
+    top: 50%;
+    left: 60%;
+    animation-delay: 2s;
+}
+
+.animated-background .image3 {
+    background-image: url('image3.jpeg'); /* Replace with your image */
+    top: 70%;
+    left: 30%;
+    animation-delay: 4s;
+}
+
+/* Animation keyframes */
+@keyframes move {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+    to {
+        transform: translate(20px, 30px) scale(1.2);
+    }
+}
